@@ -3,7 +3,7 @@ from flask import Blueprint, render_template,request,flash
 auth = Blueprint('auth',__name__)
 
 
-@auth.route('/login', method=['GET','POST'])
+@auth.route('/login', methods=['GET','POST'])
 def login():
     # data = request.form
     # print(data)
@@ -14,7 +14,7 @@ def login():
 def logout():
     return "<p>logout</p>"
 
-@auth.route('/sign-up',method=['GET','POST'])
+@auth.route('/sign-up',methods=['GET','POST'])
 def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
